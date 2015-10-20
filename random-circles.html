@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <title>Random Circles</title>
+  <script src="p5.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script> -->
+  <script>
+    function setup() {
+      createCanvas(600, 600);
+      background(0);
+    }
+
+    function draw() {
+      var diameter = random(20, 200);
+      fill(random(255), random(255), random(255));
+      // ellipse(random(600),random(600),diameter,diameter);
+    }
+
+    function mousePressed() {
+      var diameter = random(20, 200);
+      fill(random(255), random(255), random(255));
+      ellipse(mouseX, mouseY, diameter, diameter);
+    }
+
+    function keyPressed() {
+      var diameter = 200;
+      for (i = 5; i > 0; i--) {
+        fill(random(255), random(255), random(255));
+        ellipse(mouseX, mouseY, diameter, diameter);
+        diameter -= 40;
+      }
+
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
