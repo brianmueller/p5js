@@ -56,9 +56,13 @@ _Brian Mueller_
  * their scope is visible inside & outside all functions
 * **local** variables are declared _inside_ a function
  * their scope is limited to that specific function
+* **system** variables are reserved keywords for values such as the `width` and `height` of the canvas
 
 ---
 ## Interaction
+* `mouseX` and `mouseY` are system variables that use the coordinates of the user's mouse
+* `function mousePressed(){}` is called when the user clicks the mouse
+* `function keyPressed(){}` is called when the user presses a key
 
 ---
 ## Conditionals
