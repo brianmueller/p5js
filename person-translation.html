@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Translating a Person</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
+    <script>
+        var centerX;
+        var centerY;
+
+        function setup() {
+            createCanvas(400, 400);
+            background(255); // white
+        }
+
+        function draw() {
+            centerX = 200;
+            centerY = 100;
+
+            // the origin (center) of this character
+            ellipse(centerX, centerY, 75, 100); // head
+
+            rectMode(CENTER)
+            rect(centerX, centerY+125, 75, 150); // body
+
+            line(centerX-20, centerY+200, centerX-40, centerY+300); // left leg
+            line(centerX+20, centerY+200, centerX+40, centerY+300); // right leg
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<!--
+IF YOU MESS UP THE CODE ABOVE, copy/paste the code below
+don't forget to beautify: command+shift+B
+
+
+       var centerX;
+       var centerY;
+
+       function setup() {
+           createCanvas(400, 400);
+           background(255); // white
+       }
+
+       function draw() {
+           centerX = 200;
+           centerY = 100;
+
+           // the origin (center) of this character
+           ellipse(200, 100, 75, 100); // head
+
+           rectMode(CENTER)
+           rect(200, 225, 75, 150); // body
+
+           line(180, 300, 160, 400); // left leg
+           line(220, 300, 240, 400); // right leg
+       }
+
+
+-->

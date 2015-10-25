@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Translating a Flower</title>
+    <script src="p5.js"></script>
+    <script>
+        var centerX;
+        var centerY;
+
+        function setup() {
+
+            createCanvas(500, 500);
+            background(200); // gray
+            noStroke(); // no outlines
+
+            centerX = width/2;
+            centerY = height*1/2;
+
+            drawFlower(centerX,centerY);
+        }
+
+        function draw() {
+
+        }
+
+        function drawFlower(centerX,centerY){
+          fill(0); // black
+          ellipse(centerX, centerY, 100, 100); // center
+
+          fill(255, 255, 0); // yellow
+          ellipse(centerX-75, centerY, 100, 50); // left
+          ellipse(centerX+75, centerY, 100, 50); // right
+          ellipse(centerX, centerY-75, 50, 100); // top
+          ellipse(centerX, centerY+75, 50, 100); // bottom
+        }
+
+        function mouseClicked(){
+          drawFlower(mouseX,mouseY);
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+            fill(0); // black
+            ellipse(200, 300, 100, 100); // center
+
+            fill(255, 255, 0); // yellow
+            ellipse(125, 300, 100, 50); // left
+            ellipse(275, 300, 100, 50); // right
+            ellipse(200, 225, 50, 100); // top
+            ellipse(200, 375, 50, 100); // bottom
+
+
+
+
+
+
+
+
+
+
+
+            var centerX = 300;
+            var centerY = 200;
+
+            fill(0); // black
+            ellipse(centerX, centerY, 100, 100); // center
+
+            fill(255, 255, 0); // yellow
+            ellipse(centerX-75, centerY, 100, 50); // left
+            ellipse(centerX+75, centerY, 100, 50); // right
+            ellipse(centerX, centerY-75, 50, 100); // top
+            ellipse(centerX, centerY+75, 50, 100); // bottom
+-->

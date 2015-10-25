@@ -1,4 +1,4 @@
-# P5.js tutorial
+# p5.js tutorial
 _Brian Mueller_
 
 ---

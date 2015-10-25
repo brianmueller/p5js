@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Dilating a Flower</title>
+    <script src="p5.js"></script>
+    <script>
+        var centerX;
+        var centerY;
+        var scale;
+
+        function setup() {
+            createCanvas(500, 500);
+            background(200); // gray
+            // noStroke(); // no outlines
+
+            centerX = width/2;
+            centerY = height*1/2;
+            frameRate(2); // 2 FPS (default: 30 or 60?)
+            drawFlower(centerX,centerY);
+        }
+
+        function draw() {
+            drawFlower(random(width),random(height),random(2));
+        }
+
+        function drawFlower(centerX,centerY,scale){
+          fill(0); // black
+          ellipse(centerX, centerY, scale*100, scale*100); // center
+
+          fill(255, 255, 0); // yellow
+          ellipse(centerX-scale*75, centerY, scale*100, scale*50); // left
+          ellipse(centerX+scale*75, centerY, scale*100, scale*50); // right
+          ellipse(centerX, centerY-scale*75, scale*50, scale*100); // top
+          ellipse(centerX, centerY+scale*75, scale*50, scale*100); // bottom
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+            fill(0); // black
+            ellipse(200, 300, 100, 100); // center
+
+            fill(255, 255, 0); // yellow
+            ellipse(125, 300, 100, 50); // left
+            ellipse(275, 300, 100, 50); // right
+            ellipse(200, 225, 50, 100); // top
+            ellipse(200, 375, 50, 100); // bottom
+
+
+
+
+
+
+
+
+
+
+
+            var centerX = 300;
+            var centerY = 200;
+
+            fill(0); // black
+            ellipse(centerX, centerY, 100, 100); // center
+
+            fill(255, 255, 0); // yellow
+            ellipse(centerX-75, centerY, 100, 50); // left
+            ellipse(centerX+75, centerY, 100, 50); // right
+            ellipse(centerX, centerY-75, 50, 100); // top
+            ellipse(centerX, centerY+75, 50, 100); // bottom
+-->
