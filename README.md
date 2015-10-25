@@ -75,12 +75,43 @@ _Brian Mueller_
 
 ---
 ## Conditionals
+```
+if(condition){
+  // code
+} elseif(condition){
+  // code
+}
+else{
+  // default
+}
+```
 
 ---
 ## Loops
-
+```
+while(condition){
+  // code
+}
+```
+```
+do{
+  // code
+}while(condition)
+```
+```
+for(i = 0; i < num; i++){
+  // code
+}
+```
 ---
 ## Functions
+```
+function myFunction(optional parameters){
+  // code
+}
+
+myFunction(arguments);
+```
 
 ---
 ## Arrays
