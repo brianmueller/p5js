@@ -1,5 +1,11 @@
 # p5.js tutorial
+### _Using code to make digital, interactive art_
 _Brian Mueller_
+
+---
+## Introduction
+* `p5.js` is a JavaScript library modeled after `Processing`, a Java library
+ * _all JavaScript syntax rules apply_
 
 ---
 ## Getting Started
@@ -43,12 +49,15 @@ _Brian Mueller_
  * max = `255` _(100% of that color)_
  * three values represent RGB values, i.e. `(255,0,0)` means red _(no green or blue)_
  * one value represents grayscale (all RGB values are equal `(150) = (150,150,150)`
- * so `(0)` = black, `(255)` = white
+ * `0` = black, `255` = white
 * **color commands**: the setting will be applied to _all future shapes_ until the setting is changed again
  * `fill(R,G,B,[A])` sets the interior color
    * `[A]` is an optional "alpha" (opacity) argument
  * `stroke(R,G,B,[A])` sets the outline color
  * `strokeWeight(#)` sets the outline thickness (px)
+ * `background(R,G,B)` sets the color of the background
+   * use inside `function setup(){}` to run once
+   * use inside `function draw(){}` to "wipe" the background for each frame
 
 ---
 ## Variables
