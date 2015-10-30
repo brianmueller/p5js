@@ -116,8 +116,10 @@ myFunction(arguments);
 ---
 ## Arrays
 
+
 ---
 ## Objects
+
 
 ---
 ## Examples
