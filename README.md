@@ -23,7 +23,7 @@ _Brian Mueller_
 * `function setup(){}` is called **once** on load  
 * `function draw(){}` is called **30 times per second** [CHECK FRAMERATE]
 * `createCanvas(w,h)` sets the size of your sketch (px)
- * optional: you can use `displayWidth` and `displayHeight`
+ * optional: you can use `displayWidth` and `displayHeight` (or `windowWidth` and `windowHeight`)
 
 ---
 ## Shapes
