@@ -9,14 +9,14 @@ _Brian Mueller_
 
 ---
 ## Getting Started
-* **template**: use [NEEDS gist LINK] to get started
- * using offline? make sure you download the p5.js file
+* **template**: use [tiny.cc/p5template](https://gist.githubusercontent.com/bmuellerhstat/bd0ca8ce27961f9c264d/raw/bd8d66b94db951bd1f87634dd75f570c5d635fd8/p5-template.html) to get started
+ * using offline? make sure you download the [p5.js](http://p5js.org/download/) file
 * IDEs
- * **Atom** (live preview)
- * **Cloud9** (cloud based, semi-live preview)
- * **Nitrous** (requires using `python -m SimpleHTTPServer -p 3000`)
-* sandbox: **jsbin.com**
-* native IDE: [NEEDS p5 LINK]
+ * **[Atom](http://atom.io/)** (live preview)
+ * **[Cloud9](http://c9.io/)** (cloud based, semi-live preview)
+ * **[Nitrous](http://www.nitrous.io/)** (requires using `python -m SimpleHTTPServer -p 3000`)
+* sandbox: **[jsbin.com](http://jsbin.com/)**
+* native IDE: [p5js](http://p5js.org/download/) > editor
 ---
 ## Understanding the Structure
 * `function setup(){}` is called **once** on load  
@@ -34,7 +34,7 @@ _Brian Mueller_
    * default "mode" is `rectMode(CORNER)`
    * `rectMode(CENTER)` **draws from the center**
    * `rectMode(CORNERS)` uses diagonal corners: `rect(x1,y1,x2,y2)`
-   * see documentation for rounded edges [NEEDS LINK]
+   * see [documentation](http://p5js.org/reference/#/p5/rect) for rounded edges
  * `ellipse(x,y,w,h)`
    * **draws from the center**
    * default "mode" is `ellipseMode(CENTER)`
@@ -73,12 +73,14 @@ _Brian Mueller_
 * `function mousePressed(){}` is called when the user clicks the mouse
 * `function keyPressed(){}` is called when the user presses a key
 
+Read more in the [documentation](http://p5js.org/reference/) under **Events** (including mobile).
+
 ---
 ## Conditionals
 ```
-if(condition){
+if (condition){
   // code
-} elseif(condition){
+} else if (condition){
   // code
 }
 else{
@@ -89,14 +91,14 @@ else{
 ---
 ## Loops
 ```
-while(condition){
+while (condition){
   // code
 }
 ```
 ```
-do{
+do {
   // code
-}while(condition)
+} while (condition);
 ```
 ```
 for(i = 0; i < num; i++){
