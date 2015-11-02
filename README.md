@@ -41,7 +41,7 @@ _Brian Mueller_
     * default "mode" is `ellipseMode(CENTER)`
     * can also use `ellipseMode(CORNER)` and `ellipseMode(CORNERS)` _(similar to_ `rectMode()`_)_
 * other shapes
- * triangle, quadrilateral, etc. (see documentation)
+ * `triangle`, `quad`rilateral, etc. (see [documentation](http://p5js.org/reference/))
 
 ---
 ## Color
