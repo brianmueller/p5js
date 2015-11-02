@@ -70,7 +70,7 @@ _Brian Mueller_
 
 ---
 ## Interaction
-* `mouseX` and `mouseY` are system variables that use the coordinates of the user's mouse
+* `mouseX` and `mouseY` are system variables that contain the coordinates of the user's mouse
 * `function mousePressed(){}` is called when the user clicks the mouse
 * `function keyPressed(){}` is called when the user presses a key
 
@@ -92,7 +92,7 @@ else{
 ---
 ## Loops
 ```
-while (condition){
+while (condition) {
   // code
 }
 ```
@@ -102,7 +102,7 @@ do {
 } while (condition);
 ```
 ```
-for(i = 0; i < num; i++){
+for (i = 0; i < num; i++) {
   // code
 }
 ```
