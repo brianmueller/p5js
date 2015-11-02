@@ -32,7 +32,7 @@ _Brian Mueller_
  * `line(x1,y1,x2,y2)`
  * `rect(x,y,w,h)`
    * _draws from the top-left corner_
-     * default "mode" is `rectMode(CORNER)`
+   * default "mode" is `rectMode(CORNER)`
    * `rectMode(CENTER)` **draws from the center**
    * `rectMode(CORNERS)` uses diagonal corners: `rect(x1,y1,x2,y2)`
    * see [documentation](http://p5js.org/reference/#/p5/rect) for rounded edges
