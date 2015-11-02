@@ -129,4 +129,5 @@ myFunction(arguments);
 * [Random Circles](random-circles.html)
 * [Ghost](ghost.html)
 * [Flower (relative position)](flower-relative-position.html)
+* [Flower dilation](flower-dilation.html)
 * [Circle Orb](circle-orb.html)
