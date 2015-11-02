@@ -31,7 +31,7 @@ _Brian Mueller_
  * `point(x1,y1)`
  * `line(x1,y1,x2,y2)`
  * `rect(x,y,w,h)`
-   * **draws from the top-left corner**  
+   * _draws from the top-left corner_
    * default "mode" is `rectMode(CORNER)`
    * `rectMode(CENTER)` **draws from the center**
    * `rectMode(CORNERS)` uses diagonal corners: `rect(x1,y1,x2,y2)`
