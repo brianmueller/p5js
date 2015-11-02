@@ -33,13 +33,13 @@ _Brian Mueller_
  * `rect(x,y,w,h)`
    * _draws from the top-left corner_
     * default "mode" is `rectMode(CORNER)`
-   * `rectMode(CENTER)` **draws from the center**
-   * `rectMode(CORNERS)` uses diagonal corners: `rect(x1,y1,x2,y2)`
-   * see [documentation](http://p5js.org/reference/#/p5/rect) for rounded edges
+    * `rectMode(CENTER)` **draws from the center**
+    * `rectMode(CORNERS)` uses diagonal corners: `rect(x1,y1,x2,y2)`
+    * see [documentation](http://p5js.org/reference/#/p5/rect) for rounded edges
  * `ellipse(x,y,w,h)`
    * **draws from the center**
-   * default "mode" is `ellipseMode(CENTER)`
-   * can also use `ellipseMode(CORNER)` and `ellipseMode(CORNERS)` _(similar to_ `rectMode()`_)_
+    * default "mode" is `ellipseMode(CENTER)`
+    * can also use `ellipseMode(CORNER)` and `ellipseMode(CORNERS)` _(similar to_ `rectMode()`_)_
 * other shapes
  * triangle, quadrilateral, etc. (see documentation)
 
