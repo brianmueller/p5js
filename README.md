@@ -16,7 +16,6 @@ _Brian Mueller_
  * **[Cloud9](http://c9.io/)** (cloud based, semi-live preview)
  * **[Nitrous](http://www.nitrous.io/)** (requires using `python -m SimpleHTTPServer -p 3000`)
 * sandbox: **[jsbin.com](http://jsbin.com/)**  
-
 * native IDE: [p5js](http://p5js.org/download/) > editor
 ---
 ## Understanding the Structure
