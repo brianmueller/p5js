@@ -119,11 +119,6 @@ myFunction(arguments);
 ---
 ## Arrays
 
-
----
-## Objects
-
-
 ---
 ## Examples
 * [Random Circles](random-circles.html)
