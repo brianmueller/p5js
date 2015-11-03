@@ -9,7 +9,7 @@ _Brian Mueller_
 
 ---
 ## Getting Started
-* **template**: use [tiny.cc/p5template](https://gist.githubusercontent.com/bmuellerhstat/bd0ca8ce27961f9c264d/raw/bd8d66b94db951bd1f87634dd75f570c5d635fd8/p5-template.html) to get started
+* **template**: use [tiny.cc/p5template](https://gist.githubusercontent.com/bmuellerhstat/bd0ca8ce27961f9c264d/raw/71414e28cedcc986d72f9e13312b3c979d1a165c/p5-template.html) to get started
  * using offline? make sure you download the [p5.js](http://p5js.org/download/) file
 * IDEs
  * **[Atom](http://atom.io/)** (live preview)
