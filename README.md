@@ -77,7 +77,7 @@ _Brian Mueller_
 * `function mousePressed(){}` is called when the user clicks the mouse
 * `function keyPressed(){}` is called when the user presses a key
 
-Read more in the [documentation](http://p5js.org/reference/) under **Events** (including mobile).
+Read more in the [documentation](http://p5js.org/reference/) under **Events** (including mobile: `touchX`, `touchY`, etc).
 
 ---
 ## Conditionals
