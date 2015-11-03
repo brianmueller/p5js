@@ -6,6 +6,7 @@ _Brian Mueller_
 ## Introduction
 * `p5.js` is a JavaScript library modeled after `Processing`, a Java library
  * _all JavaScript syntax rules apply_
+* runs nicely in an HTML page
 
 ---
 ## Getting Started
