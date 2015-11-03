@@ -102,7 +102,7 @@ do {
 } while (condition);
 ```
 ```
-for (i = 0; i < num; i++) {
+for (var i = 0; i < num; i++) {
   // code
 }
 ```
