@@ -1,5 +1,5 @@
 # p5.js tutorial
-### _Using code to make digital, interactive art_
+### _Using code to make interactive art_
 _Brian Mueller_
 
 ---
