@@ -1,4 +1,4 @@
-# p5.js tutorial
+# [p5.js](http://p5js.org/) tutorial
 ### _Using code to make interactive art_
 _Brian Mueller_
 
