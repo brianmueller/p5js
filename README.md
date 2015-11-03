@@ -81,7 +81,7 @@ Read more in the [documentation](http://p5js.org/reference/) under **Events** (i
 
 ---
 ## Conditionals
-```
+```javascript
 if (condition){
   // code
 } else if (condition){
@@ -94,28 +94,30 @@ else{
 
 ---
 ## Loops
-```
+```javascript
 while (condition) {
   // code
 }
 ```
-```
+```javascript
 do {
   // code
 } while (condition);
 ```
-```
+```javascript
 for (var i = 0; i < num; i++) {
   // code
 }
 ```
 ---
 ## Functions
-```
+```javascript
+// defining your function
 function myFunction(optional parameters){
   // code
 }
 
+// calling your function
 myFunction(arguments);
 ```
 
