@@ -1,34 +1,62 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
 <head>
   <title>Random Circles</title>
-  <script src="p5.js"></script>
-  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script> -->
+   <script src="p5.js"></script> 
+  <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>-->
   <script>
+    var looping = false;
     function setup() {
       createCanvas(600, 600);
       background(0);
+      
+      
     }
 
     function draw() {
       var diameter = random(20, 200);
       fill(random(255), random(255), random(255));
-      ellipse(random(600),random(600),diameter,diameter);
+      
+      if(looping){
+         ellipse(random(600),random(600),diameter,diameter);
+      }
+      
+      fill(255);
+      rectMode(CENTER);
+      rect(width/2,height/2,100,50);
+      
+      
+      fill(0);
+      textAlign(CENTER);
+      textSize(20);
+      text("PAUSE",width/2,height/2+7);
+      
+      fill(255);
+      text("Press 'c' to clear",width/2,height-20);
     }
 
     function mousePressed() {
+      if(mouseX > width/2-50 && mouseX < width/2+50 && mouseY > height/2-25 && mouseY < height/2+25){
+        looping = !looping;
+      }
       var diameter = random(20, 200);
       fill(random(255), random(255), random(255));
       ellipse(mouseX, mouseY, diameter, diameter);
     }
 
     function keyPressed() {
+ 
       var diameter = 200;
       for (i = 5; i > 0; i--) {
         fill(random(255), random(255), random(255));
         ellipse(mouseX, mouseY, diameter, diameter);
         diameter -= 40;
+      }
+      
+      if(key == 'c' || key == 'C'){
+        background(0);
       }
 
     }
