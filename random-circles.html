@@ -4,35 +4,33 @@
 
 <head>
   <title>Random Circles</title>
-   <script src="p5.js"></script> 
+   <script src="p5.js"></script>
   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>-->
   <script>
     var looping = false;
     function setup() {
       createCanvas(600, 600);
       background(0);
-      
-      
     }
 
     function draw() {
       var diameter = random(20, 200);
       fill(random(255), random(255), random(255));
-      
+
       if(looping){
          ellipse(random(600),random(600),diameter,diameter);
       }
-      
+
       fill(255);
       rectMode(CENTER);
       rect(width/2,height/2,100,50);
-      
-      
+
+
       fill(0);
       textAlign(CENTER);
       textSize(20);
       text("PAUSE",width/2,height/2+7);
-      
+
       fill(255);
       text("Press 'c' to clear",width/2,height-20);
     }
@@ -47,14 +45,14 @@
     }
 
     function keyPressed() {
- 
+
       var diameter = 200;
       for (i = 5; i > 0; i--) {
         fill(random(255), random(255), random(255));
         ellipse(mouseX, mouseY, diameter, diameter);
         diameter -= 40;
       }
-      
+
       if(key == 'c' || key == 'C'){
         background(0);
       }
