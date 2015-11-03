@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>Processing Template</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
+    <script>
+
+        function setup() {
+            createCanvas(500,500);
+          diameter = 100;
+        }
+
+        function draw() {
+
+
+        }
+
+      function mouseDragged(){
+        line(0,0,mouseX,mouseY);
+        line(0,height,mouseX,mouseY);
+        line(width,0,mouseX,mouseY);
+        line(width,height,mouseX,mouseY);
+      }
+
+
+    function mouseMoved(){
+        var diameter = random(20);
+        fill((255),random(255),random(255));
+        ellipse(mouseX+random(50),mouseY+random(50),diameter,diameter)
+      }
+      function keyPressed(){
+        background(255);
+      }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

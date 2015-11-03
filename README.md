@@ -126,6 +126,7 @@ myFunction(arguments);
 * [Flower (relative position)](flower-relative-position.html)
 * [Flower dilation](flower-dilation.html)
 * [Interaction & Loops](interaction-loop.html)
+* [Interaction & Graffiti](interaction-graffiti.html)
 * [Circle Orb](circle-orb.html)
 * [Kuku Kube](http://brianmueller.github.io/kuku-kube/) [[mobile](http://brianmueller.github.io/kuku-kube/mobile)]
 * [Pong](pong.html)
