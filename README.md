@@ -87,7 +87,7 @@ if (condition){
 } else if (condition){
   // code
 }
-else{
+else {
   // default
 }
 ```
