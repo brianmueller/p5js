@@ -123,6 +123,10 @@ myFunction(arguments);
 
 ---
 ## Arrays
+```javascript
+var arrayName = [item1, item2, ...];
+arrayName[1]; // returns item2
+```
 
 ---
 ## Examples
