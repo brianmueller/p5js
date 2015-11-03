@@ -23,17 +23,18 @@ _Brian Mueller_
 ---
 ## Understanding the Structure
 * `function setup(){}` is called **once** on load  
-* `function draw(){}` is called **30 times per second** [CHECK FRAMERATE]
+* `function draw(){}` is called **60 times per second**
+   * you can change this with `frameRate(#)`
 * `createCanvas(w,h)` sets the size of your sketch (px)
  * optional: you can use `displayWidth` and `displayHeight` (or `windowWidth` and `windowHeight`)
 
 ---
 ## Shapes
 * the 4 basic shapes
- * `point(x1,y1)`
+ * `point(x,y)`
  * `line(x1,y1,x2,y2)`
  * `rect(x,y,w,h)`
-   * _draws from the top-left corner_
+   * **draws from the top-left corner**
     * default "mode" is `rectMode(CORNER)`
     * `rectMode(CENTER)` **draws from the center**
     * `rectMode(CORNERS)` uses diagonal corners: `rect(x1,y1,x2,y2)`
