@@ -125,4 +125,5 @@ myFunction(arguments);
 * [Ghost](ghost.html)
 * [Flower (relative position)](flower-relative-position.html)
 * [Flower dilation](flower-dilation.html)
+* [Interaction & Loops](interaction-loop.html)
 * [Circle Orb](circle-orb.html)
