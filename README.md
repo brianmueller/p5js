@@ -13,7 +13,7 @@ _Brian Mueller_
 * **template**: use [tiny.cc/p5template](https://gist.githubusercontent.com/bmuellerhstat/bd0ca8ce27961f9c264d/raw/5bdc81a80b9ff726949078905b9c0d64b528215b/p5-template.html) to get started
  * using offline? make sure you download the [p5.js](http://p5js.org/download/) file
  * you can also fork/clone this repo
-* IDEs 
+* IDEs
  * **[Atom](http://atom.io/)** (live preview)
  * **[Cloud9](http://c9.io/)** (cloud based, semi-live preview)
  * **[Nitrous](http://www.nitrous.io/)** (requires using `python -m SimpleHTTPServer -p 3000`)
