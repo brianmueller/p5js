@@ -139,3 +139,8 @@ arrayName[1]; // returns item2
 * [Circle Orb](circle-orb.html)
 * [Kuku Kube](http://brianmueller.github.io/kuku-kube/) [[mobile](http://brianmueller.github.io/kuku-kube/mobile)]
 * [Pong](pong.html)
+
+---
+## Extra
+* [GitHub Pages Tutorial](http://bmuellerhstat.github.io/gh-pages-tutorial/)
+  * For mirroring your gh-pages and master branches
