@@ -3,9 +3,16 @@ _Brian Mueller_
 
 ---
 ## Introduction
-* **p5.js** is a _JavaScript_ library modeled after **Processing**, a _Java_ library
- * all _JavaScript_ syntax rules apply
-* runs nicely in an HTML page
+* What is p5js?
+  * **p5.js** is a _JavaScript_ library modeled after **Processing**, a _Java_ library
+  * all _JavaScript_ syntax rules apply
+* How do I use p5js?
+  * It runs nicely in an HTML page.  Just embed it like you would with normal javascript!
+* What is p5js used for?
+  * Animations
+  * Games
+  * Mockups
+  * Much more!
 
 ---
 ## Getting Started
