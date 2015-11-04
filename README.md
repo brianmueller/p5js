@@ -33,6 +33,9 @@ _Brian Mueller_
    * you can change this with `frameRate(#)`
 * `createCanvas(w,h)` sets the size of your sketch (px)
  * optional: you can use `displayWidth` and `displayHeight` (or `windowWidth` and `windowHeight`)
+* the top-left corner is `(0,0)`
+  * `x` increases as you go **right**
+  * `y` increases as you go **down**
 
 ---
 ## Shapes
