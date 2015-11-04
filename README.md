@@ -1,11 +1,10 @@
-# [p5.js](http://p5js.org/) tutorial
-### _Using code to make interactive art_
+# Using code to make interactive art
 _Brian Mueller_
 
 ---
 ## Introduction
-* `p5.js` is a JavaScript library modeled after `Processing`, a Java library
- * _all JavaScript syntax rules apply_
+* **p5.js** is a _JavaScript_ library modeled after **Processing**, a _Java_ library
+ * all _JavaScript_ syntax rules apply
 * runs nicely in an HTML page
 
 ---
