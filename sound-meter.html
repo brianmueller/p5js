@@ -44,9 +44,11 @@
       }
     }
 
-    function mousePressed() {
-      var fs = fullScreen();
-      fullScreen(!fs);
+    function keyPressed() {
+      if(key == 'f' || key == 'F'){
+        var fs = fullScreen();
+        fullScreen(!fs);
+      }
     }
 
     function windowResized() {
