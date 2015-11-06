@@ -13,7 +13,7 @@
     function setup() {
       createCanvas(windowWidth, windowHeight);
       numBars = 5;
-      sensitivity = 5;
+      sensitivity = 6;
       numOpacity = 0;
 
       mic = new p5.AudioIn()
@@ -48,7 +48,8 @@
         fill(r, g, 0);
         // console.log(g);
         // rect(100*i+10,height-barY,80,height);
-        rect(width / 5 * i + 10, height - barY + random(-height / 10, height / 10), width * .16, height * 1.1);
+        // rect(width / 5 * i + 10, height - barY + random(-height / 10, height / 10), width * .16, height * 1.1);
+        rect(width / numBars * i, height - barY + random(-height / 10, height / 10), width / numBars * 0.8, height * 1.1);
       }
 
       noStroke();
@@ -76,7 +77,14 @@
         sensitivity--;
         numOpacity = 255;
       }
+      if (keyCode == LEFT_ARROW){
+        numBars--;
+      }
+      if (keyCode == RIGHT_ARROW){
+        numBars++;
+      }
       sensitivity = constrain(sensitivity,0,10);
+      numBars = constrain(numBars,0,100);
 
     }
 
