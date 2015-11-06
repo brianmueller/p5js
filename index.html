@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="p5js Tutorial : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>p5js Tutorial</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/brianmueller/p5js">View on GitHub</a>
+
+          <h1 id="project_title">p5js Tutorial</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/brianmueller/p5js/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/brianmueller/p5js/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="using-code-to-make-interactive-art" class="anchor" href="#using-code-to-make-interactive-art" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using code to make interactive art</h1>
+
+<p><em>Brian Mueller</em></p>
+
+<hr>
+
+<h2>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<ul>
+<li>What is p5js?
+
+<ul>
+<li>
+<strong>p5.js</strong> is a <em>JavaScript</em> library modeled after <strong>Processing</strong>, a <em>Java</em> library</li>
+<li>all <em>JavaScript</em> syntax rules apply</li>
+</ul>
+</li>
+<li>How do I use p5js?
+
+<ul>
+<li>It runs nicely in an HTML page.  Just embed it like you would with normal javascript!</li>
+</ul>
+</li>
+<li>What is p5js used for?
+
+<ul>
+<li>Animations</li>
+<li>Games</li>
+<li>Mockups</li>
+<li>Much more!</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="getting-started" class="anchor" href="#getting-started" aria-hidden="true"><span class="octicon octicon-link"></span></a>Getting Started</h2>
+
+<ul>
+<li>
+<strong>template</strong>: use <a href="https://gist.githubusercontent.com/bmuellerhstat/bd0ca8ce27961f9c264d/raw/5bdc81a80b9ff726949078905b9c0d64b528215b/p5-template.html">tiny.cc/p5template</a> to get started
+
+<ul>
+<li>using offline? make sure you download the <a href="http://p5js.org/download/">p5.js</a> file</li>
+<li>you can also fork/clone this repo</li>
+</ul>
+</li>
+<li>IDEs
+
+<ul>
+<li>
+<strong><a href="http://atom.io/">Atom</a></strong> (live preview)</li>
+<li>
+<strong><a href="http://c9.io/">Cloud9</a></strong> (cloud based, semi-live preview)</li>
+<li>
+<strong><a href="http://www.nitrous.io/">Nitrous</a></strong> (requires using <code>python -m SimpleHTTPServer -p 3000</code>)</li>
+</ul>
+</li>
+<li>sandbox: <strong><a href="http://jsbin.com/">jsbin.com</a></strong>
+</li>
+<li>native IDE: <a href="http://p5js.org/download/">p5js</a> &gt; editor<br>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="understanding-the-structure" class="anchor" href="#understanding-the-structure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding the Structure</h2>
+
+<ul>
+<li>
+<code>function setup(){}</code> is called <strong>once</strong> on load<br>
+</li>
+<li>
+<code>function draw(){}</code> is called <strong>60 times per second</strong>
+
+<ul>
+<li>you can change this with <code>frameRate(#)</code>
+</li>
+</ul>
+</li>
+<li>
+<code>createCanvas(w,h)</code> sets the size of your sketch (px)
+
+<ul>
+<li>optional: you can use <code>displayWidth</code> and <code>displayHeight</code> (or <code>windowWidth</code> and <code>windowHeight</code>)</li>
+</ul>
+</li>
+<li>the top-left corner is <code>(0,0)</code>
+
+<ul>
+<li>
+<code>x</code> increases as you go <strong>right</strong>
+</li>
+<li>
+<code>y</code> increases as you go <strong>down</strong>
+</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="shapes" class="anchor" href="#shapes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Shapes</h2>
+
+<ul>
+<li>the 4 basic shapes
+
+<ul>
+<li><code>point(x,y)</code></li>
+<li><code>line(x1,y1,x2,y2)</code></li>
+<li>
+<code>rect(x,y,w,h)</code>
+
+<ul>
+<li><strong>draws from the top-left corner</strong></li>
+<li>default "mode" is <code>rectMode(CORNER)</code>
+</li>
+<li>
+<code>rectMode(CENTER)</code> <strong>draws from the center</strong>
+</li>
+<li>
+<code>rectMode(CORNERS)</code> uses diagonal corners: <code>rect(x1,y1,x2,y2)</code>
+</li>
+<li>see <a href="http://p5js.org/reference/#/p5/rect">documentation</a> for rounded edges</li>
+</ul>
+</li>
+<li>
+<code>ellipse(x,y,w,h)</code>
+
+<ul>
+<li><strong>draws from the center</strong></li>
+<li>default "mode" is <code>ellipseMode(CENTER)</code>
+</li>
+<li>can also use <code>ellipseMode(CORNER)</code> and <code>ellipseMode(CORNERS)</code> <em>(similar to</em> <code>rectMode()</code><em>)</em>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>other shapes
+
+<ul>
+<li>
+<code>triangle</code>, <code>quad</code>rilateral, etc. (see <a href="http://p5js.org/reference/">documentation</a>)</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="color" class="anchor" href="#color" aria-hidden="true"><span class="octicon octicon-link"></span></a>Color</h2>
+
+<ul>
+<li>
+<strong>color theory</strong>
+
+<ul>
+<li>min = <code>0</code> <em>(none of that color)</em>
+</li>
+<li>max = <code>255</code> <em>(100% of that color)</em>
+</li>
+<li>three values represent RGB values, i.e. <code>(255,0,0)</code> means red <em>(no green or blue)</em>
+</li>
+<li>one value represents grayscale (all RGB values are equal <code>(150) = (150,150,150)</code>
+</li>
+<li>
+<code>0</code> = black, <code>255</code> = white</li>
+</ul>
+</li>
+<li>
+<strong>color commands</strong>: the setting will be applied to <em>all future shapes</em> until the setting is changed again
+
+<ul>
+<li>
+<code>fill(R,G,B,[A])</code> sets the interior color
+
+<ul>
+<li>
+<code>[A]</code> is an optional "alpha" (opacity) argument</li>
+</ul>
+</li>
+<li>
+<code>stroke(R,G,B,[A])</code> sets the outline color</li>
+<li>
+<code>strokeWeight(#)</code> sets the outline thickness (px)</li>
+<li>
+<code>background(R,G,B)</code> sets the color of the background
+
+<ul>
+<li>use inside <code>function setup(){}</code> to run once</li>
+</ul>
+</li>
+<li>use inside <code>function draw(){}</code> to "wipe" the background for each frame</li>
+</ul>
+</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="variables" class="anchor" href="#variables" aria-hidden="true"><span class="octicon octicon-link"></span></a>Variables</h2>
+
+<ul>
+<li>
+<strong>global</strong> variables must be declared <em>outside</em> of all functions
+
+<ul>
+<li>their scope is visible inside &amp; outside all functions</li>
+</ul>
+</li>
+<li>
+<strong>local</strong> variables are declared <em>inside</em> a function
+
+<ul>
+<li>their scope is limited to that specific function</li>
+</ul>
+</li>
+<li>
+<strong>system</strong> variables are reserved keywords for values such as the <code>width</code> and <code>height</code> of the canvas</li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="interaction" class="anchor" href="#interaction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Interaction</h2>
+
+<ul>
+<li>
+<code>mouseX</code> and <code>mouseY</code> are system variables that contain the coordinates of the user's mouse</li>
+<li>
+<code>function mousePressed(){}</code> is called when the user clicks the mouse</li>
+<li>
+<code>function keyPressed(){}</code> is called when the user presses a key</li>
+</ul>
+
+<p>Read more in the <a href="http://p5js.org/reference/">documentation</a> under <strong>Events</strong> (including mobile: <code>touchX</code>, <code>touchY</code>, etc).</p>
+
+<hr>
+
+<h2>
+<a id="conditionals" class="anchor" href="#conditionals" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conditionals</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">if</span> (condition){
+  <span class="pl-c">// code</span>
+} <span class="pl-k">else</span> <span class="pl-k">if</span> (condition){
+  <span class="pl-c">// code</span>
+}
+<span class="pl-k">else</span> {
+  <span class="pl-c">// default</span>
+}</pre></div>
+
+<hr>
+
+<h2>
+<a id="loops" class="anchor" href="#loops" aria-hidden="true"><span class="octicon octicon-link"></span></a>Loops</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">while</span> (condition) {
+  <span class="pl-c">// code</span>
+}</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">do</span> {
+  <span class="pl-c">// code</span>
+} <span class="pl-k">while</span> (condition);</pre></div>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">for</span> (<span class="pl-k">var</span> i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> num; i<span class="pl-k">++</span>) {
+  <span class="pl-c">// code</span>
+}</pre></div>
+
+<hr>
+
+<h2>
+<a id="functions" class="anchor" href="#functions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Functions</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-c">// defining your function</span>
+<span class="pl-k">function</span> <span class="pl-en">myFunction</span>(<span class="pl-smi">optional</span> <span class="pl-smi">parameters</span>){
+  <span class="pl-c">// code</span>
+}
+
+<span class="pl-c">// calling your function</span>
+myFunction(arguments);</pre></div>
+
+<hr>
+
+<h2>
+<a id="arrays" class="anchor" href="#arrays" aria-hidden="true"><span class="octicon octicon-link"></span></a>Arrays</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> arrayName <span class="pl-k">=</span> [item1, item2, ...];
+arrayName[<span class="pl-c1">1</span>]; <span class="pl-c">// returns item2</span></pre></div>
+
+<hr>
+
+<h2>
+<a id="examples" class="anchor" href="#examples" aria-hidden="true"><span class="octicon octicon-link"></span></a>Examples</h2>
+
+<ul>
+<li><a href="random-circles.html">Random Circles</a></li>
+<li><a href="ghost.html">Ghost</a></li>
+<li><a href="flower-relative-position.html">Flower (relative position)</a></li>
+<li><a href="flower-dilation.html">Flower dilation</a></li>
+<li><a href="interaction-loop.html">Interaction &amp; Loops</a></li>
+<li><a href="interaction-graffiti.html">Interaction &amp; Graffiti</a></li>
+<li><a href="circle-orb.html">Circle Orb</a></li>
+<li>
+<a href="http://brianmueller.github.io/kuku-kube/">Kuku Kube</a> [<a href="http://brianmueller.github.io/kuku-kube/mobile">mobile</a>]</li>
+<li><a href="pong.html">Pong</a></li>
+</ul>
+
+<hr>
+
+<h2>
+<a id="extra" class="anchor" href="#extra" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extra</h2>
+
+<ul>
+<li>
+<a href="http://bmuellerhstat.github.io/gh-pages-tutorial/">GitHub Pages Tutorial</a>
+
+<ul>
+<li>For mirroring your gh-pages and master branches</li>
+</ul>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">p5js Tutorial maintained by <a href="https://github.com/brianmueller">brianmueller</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+
+
+  </body>
+</html>
