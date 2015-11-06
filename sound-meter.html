@@ -7,10 +7,14 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.17/addons/p5.sound.js"></script>
   <script>
     var numBars;
+    var sensitivty;
+    var numOpacity;
 
     function setup() {
       createCanvas(windowWidth, windowHeight);
       numBars = 5;
+      sensitivity = 5;
+      numOpacity = 0;
 
       mic = new p5.AudioIn()
       mic.start();
@@ -22,8 +26,12 @@
       background(0);
 
       micLevel = mic.getLevel();
+      micLevel = micLevel + (sensitivity-5)*0.03
       micLevel = map(micLevel, 0, 0.23, 0, height);
+
+      // as sensitivity increases, decrease miclevel
       console.log(micLevel);
+      // text(micLevel,width/2,100);
 
       for (var i = 0; i < numBars; i++) {
         // var barY = random(height);
@@ -42,6 +50,17 @@
         // rect(100*i+10,height-barY,80,height);
         rect(width / 5 * i + 10, height - barY + random(-height / 10, height / 10), width * .16, height * 1.1);
       }
+
+      stroke(0,numOpacity);
+      fill(255,numOpacity);
+      textAlign(CENTER);
+      textSize(height*.75);
+      text(sensitivity,width/2,height*.75);
+
+      numOpacity -= 20;
+      numOpacity = constrain(numOpacity,0,255);
+
+      // text(numOpacity,width/2,100);
     }
 
     function keyPressed() {
@@ -49,6 +68,16 @@
         var fs = fullScreen();
         fullScreen(!fs);
       }
+      if (keyCode == UP_ARROW){
+        sensitivity++;
+        numOpacity = 255;
+      }
+      if (keyCode == DOWN_ARROW){
+        sensitivity--;
+        numOpacity = 255;
+      }
+      sensitivity = constrain(sensitivity,0,10);
+
     }
 
     function windowResized() {
