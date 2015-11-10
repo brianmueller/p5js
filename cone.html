@@ -9,7 +9,7 @@
 
     //draw a spining cone with radius 200 and height 200
 function setup(){
-  createCanvas(100, 100, WEBGL);
+  createCanvas(displayWidth,displayHeight, WEBGL);
 }
 
 function draw(){
@@ -17,7 +17,7 @@ function draw(){
   rotateX(accelerationX);
   rotateY(accelerationY);
   rotateZ(accelerationZ);
-  cone(200, 200);
+  cone(width/2, height/2);
 }
   </script>
 </head>
