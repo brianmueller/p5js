@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <title>p5js Template</title>
+
+  <script type="text/javascript">
+    // this code prevents the entire page from scrolling
+    // when pressing the arrow keys
+    // http://stackoverflow.com/questions/3208021/prevent-scrolling-with-arrow-keys
+    document.onkeydown = function(evt) {
+      evt = evt || window.event;
+      var keyCode = evt.keyCode;
+      if (keyCode >= 37 && keyCode <= 40) {
+        return false;
+      }
+    };
+  </script>
+
+
+  <script src="p5.js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script> -->
+  <script>
+
+  var red;
+  var green;
+  var blue;
+
+  var changeR;
+  var changeG;
+  var changeB;
+
+  var diameter;
+  var diameterChange;
+
+    function setup() {
+      createCanvas(displayWidth, displayHeight);
+      background(0);
+      // strokeWeight(15);
+      red = 0;
+      green = 20;
+      blue = 30;
+
+      changeR = 1;
+      changeG = 2;
+      changeB = 3;
+
+      diameter = 10;
+      diameterChange = 0.1;
+
+      noStroke();
+    }
+
+    function draw() {
+      background(0, 10)
+
+      stroke(255)
+      text("elephant", width / 2, 20);
+
+    }
+
+    function mousePressed() {
+
+    }
+
+    function touchStarted() {
+      fill(red,green,blue)
+      // line(ptouchX, ptouchY, touchX, touchY);
+
+      ellipse(touchX+random(-2*diameter,2*diameter),touchY+random(-2*diameter,2*diameter),diameter,diameter)
+
+      red += changeR;
+      green += changeG;
+      blue += changeB;
+
+      if(red > 255 || red < 0){
+        changeR *= -1;
+      }
+
+      if(green > 255 || green < 0){
+        changeG *= -1;
+      }
+
+      if(blue > 255 || blue < 0){
+        changeB *= -1;
+      }
+
+      // reverseDirection(red,changeR);
+      reverseDirection(green,changeG);
+      reverseDirection(blue,changeB);
+
+      diameter += diameterChange;
+
+      if(diameter > width/30 || diameter < 0){
+        diameterChange *= -1;
+      }
+
+
+      console.log("red: " + red + ", green: " + green + ", blue: " + blue);
+    }
+
+    function reverseDirection(color,change){
+      if(color > 255 || color < 0){
+        change *= -1;
+      }
+    }
+
+    function keyPressed() {
+
+    }
+
+    function touchStarted() {
+
+    }
+
+    function touchMoved() {
+      line(ptouchX, ptouchY, touchX, touchY);
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
