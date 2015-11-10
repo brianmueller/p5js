@@ -1,0 +1,29 @@
+<!-- Michael -->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+  <title>Processing Template</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
+  <script>
+
+    //draw a spining cone with radius 200 and height 200
+function setup(){
+  createCanvas(100, 100, WEBGL);
+}
+
+function draw(){
+  background(200);
+  rotateX(accelerationX);
+  rotateY(accelerationY);
+  rotateZ(accelerationZ);
+  cone(200, 200);
+}
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
