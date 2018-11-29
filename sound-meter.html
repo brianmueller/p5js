@@ -3,8 +3,8 @@
 
 <head>
   <title>Sound Meter</title>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.13/p5.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.17/addons/p5.sound.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
   <script>
     var numBars;
     var sensitivty;
@@ -28,7 +28,7 @@
       background(0);
 
       micLevel = mic.getLevel();
-      micLevel = micLevel + (sensitivity-5)*0.03
+      micLevel = micLevel + (sensitivity - 5) * 0.03
       micLevel = map(micLevel, 0, 0.23, 0, height);
 
       // as sensitivity increases, decrease miclevel
@@ -55,20 +55,20 @@
       }
 
       noStroke();
-      fill(255,numOpacity);
+      fill(255, numOpacity);
       textAlign(CENTER);
-      textSize(height*.75);
-      text(sensitivity,width/2,height*.75);
+      textSize(height * .75);
+      text(sensitivity, width / 2, height * .75);
       numOpacity -= 20;
-      numOpacity = constrain(numOpacity,0,255);
+      numOpacity = constrain(numOpacity, 0, 255);
 
-      fill(255,directionsOpacity);
-      textSize(height*.15);
-      text("Make some noise!",width/2,height/2-100);
-      textSize(height*.05);
-      text("Use the arrows for more features",width/2,height/2+100)
+      fill(255, directionsOpacity);
+      textSize(height * .15);
+      text("Make some noise!", width / 2, height / 2 - 100);
+      textSize(height * .05);
+      text("Use the arrows for more features", width / 2, height / 2 + 100)
       directionsOpacity -= 10;
-      directionsOpacity = constrain(directionsOpacity,0,1000);
+      directionsOpacity = constrain(directionsOpacity, 0, 1000);
     }
 
     function keyPressed() {
@@ -76,22 +76,22 @@
         var fs = fullScreen();
         fullScreen(!fs);
       }
-      if (keyCode == UP_ARROW){
+      if (keyCode == UP_ARROW) {
         sensitivity++;
         numOpacity = 255;
       }
-      if (keyCode == DOWN_ARROW){
+      if (keyCode == DOWN_ARROW) {
         sensitivity--;
         numOpacity = 255;
       }
-      if (keyCode == LEFT_ARROW){
+      if (keyCode == LEFT_ARROW) {
         numBars--;
       }
-      if (keyCode == RIGHT_ARROW){
+      if (keyCode == RIGHT_ARROW) {
         numBars++;
       }
-      sensitivity = constrain(sensitivity,0,10);
-      numBars = constrain(numBars,0,100);
+      sensitivity = constrain(sensitivity, 0, 10);
+      numBars = constrain(numBars, 0, 100);
 
     }
 
@@ -106,7 +106,6 @@
       overflow: hidden;
       background-color: black;
     }
-
   </style>
 
 </head>
